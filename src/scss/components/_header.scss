@@ -1,0 +1,126 @@
+/* Стили для шапки и меню */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: $secondary-color;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: $shadow;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    &-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    &-name {
+      color: $white;
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    &__logo {
+      &-img {
+        width: 30px;
+        height: 30px;
+      }
+      &-name {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.nav {
+  &__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+
+    &-line {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: $white;
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+
+    &--active &-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 4px);
+    }
+
+    &--active &-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    &--active &-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__link {
+    color: $white;
+    font-size: $font-size-nav;
+    transition: color 0.3s, transform 0.3s;
+
+    &:hover {
+      color: $primary-color;
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__hamburger {
+      display: block;
+    }
+
+    &__list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background: $secondary-color;
+      padding: 1rem;
+      box-shadow: $shadow;
+
+      &--open {
+        display: flex;
+      }
+    }
+
+    &__link {
+      padding: 0.5rem 0;
+      font-size: $font-size-p;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__hamburger {
+      padding: 0.3rem;
+    }
+
+    &__list {
+      padding: 0.5rem;
+    }
+  }
+}

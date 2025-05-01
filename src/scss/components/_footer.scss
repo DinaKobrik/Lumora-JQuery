@@ -1,0 +1,76 @@
+/* Стили для футера */
+.footer {
+  padding: 2rem;
+  background: $secondary-color;
+  color: $white;
+  text-align: center;
+  box-shadow: $shadow;
+
+  &__scroll-top {
+    padding: 1rem 2rem;
+    background: $gradient-bg-btn;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-size: $font-size-p;
+    box-shadow: $shadow;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: $font-size-small;
+  }
+
+  &__link {
+    color: $primary-color;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+    padding: 0 5px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -3px;
+      height: 20px;
+      width: 2px;
+      background: $white;
+    }
+    &:last-child {
+      &::after {
+        width: 0px;
+      }
+    }
+    &:hover {
+      color: darken($primary-color, 10%);
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 1rem;
+
+    &__scroll-top {
+      padding: 0.6rem 1.2rem;
+      font-size: $font-size-small;
+    }
+
+    &__social {
+      font-size: $font-size-small;
+      flex-direction: column;
+    }
+    &__link {
+      &::after {
+        width: 0px;
+      }
+    }
+  }
+}

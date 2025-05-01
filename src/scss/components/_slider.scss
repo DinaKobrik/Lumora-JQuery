@@ -1,0 +1,146 @@
+/* Стили для слайдера */
+.slider {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: $gradient-bg-base;
+  box-shadow: $shadow;
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: $font-size-h2;
+  }
+
+  &__wrapper {
+    position: relative;
+    max-width: $slider-max-width;
+    margin: 0 auto;
+  }
+
+  &__container {
+    max-width: $slider-max-width;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 450px;
+    position: relative;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity $transition-duration ease,
+      transform $transition-duration ease;
+
+    &--active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $border-radius-img;
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $gradient-bg;
+    color: $white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    font-size: $font-size-p;
+    box-shadow: $shadow;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__prev {
+    left: 10px;
+  }
+
+  &__next {
+    right: 10px;
+  }
+
+  &__dots {
+    display: none;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  &__dot {
+    display: inline-block;
+    width: $dot-size;
+    height: $dot-size;
+    background: $gray-border;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &--active {
+      background: $primary-color;
+    }
+
+    &:hover {
+      background: $gradient-bg;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__container {
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__container {
+      height: 300px;
+    }
+
+    &__title {
+      font-size: $font-size-h3;
+    }
+
+    &__prev,
+    &__next {
+      display: none;
+    }
+
+    &__dots {
+      display: block;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 2rem 1rem;
+
+    &__container {
+      height: 250px;
+    }
+
+    &__title {
+      font-size: $font-size-h3;
+    }
+
+    &__dot {
+      width: $dot-size * 0.8;
+      height: $dot-size * 0.8;
+      margin: 0 0.3rem;
+    }
+  }
+}

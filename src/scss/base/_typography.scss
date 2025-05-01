@@ -1,0 +1,35 @@
+/* Базовые стили для текста */
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../../public/fonts/Comfortaa-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../../public/fonts/Comfortaa-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  font-family: $font-family;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+p {
+  font-size: $font-size-p;
+}

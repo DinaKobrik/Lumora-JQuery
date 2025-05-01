@@ -1,0 +1,66 @@
+/* Стили для прелоадера с эффектом инфинити-кольца */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.preloader-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+  }
+
+  &::before {
+    border-top-color: #f0a500;
+    border-bottom-color: #d39000;
+    animation-direction: normal;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  &::after {
+    border-left-color: #e74c3c;
+    border-right-color: #d54535;
+    animation-direction: reverse;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.preloader-spinner::before,
+.preloader-spinner::after {
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.7),
+    0 0 20px rgba(78, 205, 196, 0.7);
+}

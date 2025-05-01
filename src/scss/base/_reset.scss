@@ -1,0 +1,33 @@
+/* Сброс стандартных стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  line-height: 1.6;
+  font-size: $font-size-p;
+  background: $gray-light;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: $border-radius-img;
+}
+
+button {
+  border-radius: $border-radius-btn;
+}

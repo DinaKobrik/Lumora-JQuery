@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <title>Фотостудия Lumora</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="public/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="public/img/favicon/site.webmanifest">
+    <link rel="stylesheet" href="/src/scss/main.scss">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+    <header class="header">
+        <div class="header__logo"><img src="public/img/logo.png" alt="Logo Lumora" class="header__logo-img"><span
+                class="header__logo-name">Lumora</span></div>
+        <nav class="nav">
+            <button class="nav__hamburger">
+                <span class="nav__hamburger-line"></span>
+                <span class="nav__hamburger-line"></span>
+                <span class="nav__hamburger-line"></span>
+            </button>
+            <ul class="nav__list">
+                <li><a href="#slider" class="nav__link">Избранное</a></li>
+                <li><a href="#faq" class="nav__link">О нас</a></li>
+                <li><a href="#gallery" class="nav__link">Портфолио</a></li>
+                <li><a href="#contact" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1 class="hero__title">Запечатли Момент</h1>
+                <p class="hero__subtitle">Профессиональная фотосъемка для любого события</p>
+                <button class="hero__btn">Посмотреть портфолио</button>
+            </div>
+        </section>
+
+        <section id="slider" class="slider">
+            <div class="container">
+                <h2 class="slider__title">Избранные работы</h2>
+                <div class="slider__wrapper">
+                    <div class="slider__container">
+                        <div class="slider__item"><img src="public/img/slider/slide1.jpg" alt="Избранная работа 1">
+                        </div>
+                        <div class="slider__item"><img src="public/img/slider/slide2.jpg" alt="Избранная работа 2">
+                        </div>
+                        <div class="slider__item"><img src="public/img/slider/slide3.jpg" alt="Избранная работа 3">
+                        </div>
+                    </div>
+                    <button class="slider__prev">←</button>
+                    <button class="slider__next">→</button>
+                    <div class="slider__dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="faq__title">О наших услугах</h2>
+                <div class="faq__item">
+                    <h3 class="faq__question">Виды съемки</h3>
+                    <div class="faq__answer">Мы проводим портретную, свадебную, семейную и коммерческую фотосъемку.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__question">Бронь</h3>
+                    <div class="faq__answer">Заполните форму в разделе "Контакты", и мы свяжемся с вами!</div>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__question">Стоимость</h3>
+                    <div class="faq__answer">Цены зависят от типа съемки, свяжитесь с нами для уточнения.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="gallery__title">Наше портфолио</h2>
+                <div class="gallery__filters">
+                    <button class="gallery__filter" data-filter="all">Все</button>
+                    <button class="gallery__filter" data-filter="wedding">Свадьбы</button>
+                    <button class="gallery__filter" data-filter="portrait">Портреты</button>
+                    <button class="gallery__filter" data-filter="commercial">Коммерция</button>
+                </div>
+                <div class="gallery__items">
+                    <div class="gallery__item" data-category="wedding"><img src="public/img/gallery/wedding1.jpg"
+                            alt="Свадебная съемка 1"></div>
+                    <div class="gallery__item" data-category="wedding"><img src="public/img/gallery/wedding2.jpg"
+                            alt="Свадебная съемка 2"></div>
+                    <div class="gallery__item" data-category="wedding"><img src="public/img/gallery/wedding3.jpg"
+                            alt="Свадебная съемка 3"></div>
+                    <div class="gallery__item" data-category="wedding"><img src="public/img/gallery/wedding4.jpeg"
+                            alt="Свадебная съемка 4"></div>
+                    <div class="gallery__item" data-category="portrait"><img src="public/img/gallery/portrait1.jpg"
+                            alt="Портрет 1"></div>
+                    <div class="gallery__item" data-category="portrait"><img src="public/img/gallery/portrait2.jpeg"
+                            alt="Портрет 2"></div>
+                    <div class="gallery__item" data-category="portrait"><img src="public/img/gallery/portrait3.jpeg"
+                            alt="Портрет 3"></div>
+                    <div class="gallery__item" data-category="portrait"><img src="public/img/gallery/portrait4.jpeg"
+                            alt="Портрет 4"></div>
+                    <div class="gallery__item" data-category="commercial"><img src="public/img/gallery/commercial1.jpeg"
+                            alt="Коммерческая съемка 1"></div>
+                    <div class="gallery__item" data-category="commercial"><img src="public/img/gallery/commercial2.jpeg"
+                            alt="Коммерческая съемка 2"></div>
+                    <div class="gallery__item" data-category="commercial"><img src="public/img/gallery/commercial3.jpg"
+                            alt="Коммерческая съемка 3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <h2 class="reviews__title">Отзывы клиентов</h2>
+                <div class="reviews__slider">
+                    <div class="reviews__slide">
+                        <div class="reviews__content">
+                            <p class="reviews__text">Великолепная фотосессия! Фотограф поймал все важные моменты нашей
+                                свадьбы.
+                                Качество снимков на высоте! <span class="reviews__text-full"
+                                    style="display: none;">Рекомендую
+                                    всем, кто ищет профессионала с индивидуальным подходом. Спасибо за эмоции,
+                                    сохраненные
+                                    навсегда!</span></p>
+                            <button class="reviews__read-more">Читать полностью</button>
+                        </div>
+                        <p class="reviews__author">Анастасия К., Свадьба</p>
+                    </div>
+                    <div class="reviews__slide">
+                        <div class="reviews__content">
+                            <p class="reviews__text">Отличная работа с детьми! Фотограф нашел общий язык с моими
+                                малышами.
+                                <span class="reviews__text-full" style="display: none;">Результат превзошел ожидания —
+                                    яркие
+                                    и
+                                    естественные фото. Будем обращаться еще!</span>
+                            </p>
+                            <button class="reviews__read-more">Читать полностью</button>
+                        </div>
+                        <p class="reviews__author">Елена М., Семейная съемка</p>
+                    </div>
+                    <div class="reviews__slide">
+                        <div class="reviews__content">
+                            <p class="reviews__text">Профессиональный подход к коммерческой съемке. Все сроки соблюдены.
+                                <span class="reviews__text-full" style="display: none;">Фотографии идеально подошли для
+                                    нашего
+                                    каталога. Рекомендую как надежного партнера!</span>
+                            </p>
+                            <button class="reviews__read-more">Читать полностью</button>
+                        </div>
+                        <p class="reviews__author">Игорь П., Коммерция</p>
+                    </div>
+                    <div class="reviews__slide">
+                        <div class="reviews__content">
+                            <p class="reviews__text">Прекрасная портретная съемка! Атмосфера была очень комфортной.
+                                <span class="reviews__text-full" style="display: none;">Фотограф помог раскрыть мою
+                                    индивидуальность. Результат — потрясающие кадры!</span>
+                            </p>
+                            <button class="reviews__read-more">Читать полностью</button>
+                        </div>
+                        <p class="reviews__author">Мария С., Портрет</p>
+                    </div>
+                    <div class="reviews__slide">
+                        <div class="reviews__content">
+                            <p class="reviews__text">Уникальный стиль съемки! Наши семейные фото получились живыми.
+                                <span class="reviews__text-full" style="display: none;">Очень довольны работой команды,
+                                    будем
+                                    рекомендовать друзьям!</span>
+                            </p>
+                            <button class="reviews__read-more">Читать полностью</button>
+                        </div>
+                        <p class="reviews__author">Дмитрий Л., Семья</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="contact__title">Забронировать фотосессию</h2>
+                <form class="contact__form">
+                    <input type="text" class="contact__input" name="name" placeholder="Ваше имя">
+                    <input type="tel" class="contact__input" name="phone" placeholder="Ваш телефон">
+                    <select class="contact__input" name="shoot-type">
+                        <option value="" disabled selected>Тип съемки</option>
+                        <option value="portrait">Портрет</option>
+                        <option value="wedding">Свадьба</option>
+                        <option value="family">Семейная</option>
+                        <option value="commercial">Коммерческая</option>
+                    </select>
+                    <textarea class="contact__textarea" name="message" placeholder="Ваше сообщение"></textarea>
+                    <button type="submit" class="contact__btn">Отправить</button>
+                    <p class="contact__policy">Нажимая кнопку, вы соглашаетесь с <a href="privacy-police.html"
+                            class="contact__policy-link">политикой конфиденциальности</a>.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <button class="footer__scroll-top">Наверх</button>
+            <p class="footer__social"><a href="mailto:contact@lumora.com" class="footer__link">contact@lumora.com</a>
+                <a href="tel:+79999999999" class="footer__link">+7 (999) 999-99-99</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="module" src="src/js/main.js"></script>
+</body>
+
+</html>

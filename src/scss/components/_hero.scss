@@ -1,0 +1,78 @@
+/* Стили для Hero-секции */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../../../public/img/hero.jpg") center/cover no-repeat;
+  color: $white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+    position: relative;
+    top: 20px;
+    margin-bottom: 1rem;
+    font-size: $font-size-h1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  &__subtitle {
+    position: relative;
+    top: 20px;
+    margin-bottom: 2rem;
+    font-size: $font-size-subtitle;
+  }
+
+  &__btn {
+    position: relative;
+    top: 20px;
+    padding: 1rem 2rem;
+    background: $gradient-bg-btn;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    font-size: $font-size-p;
+    box-shadow: $shadow;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: $font-size-h2;
+    }
+
+    &__subtitle {
+      font-size: $font-size-p;
+    }
+
+    &__btn {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 0 1rem;
+
+    &__title {
+      font-size: $font-size-h3;
+    }
+
+    &__subtitle {
+      font-size: $font-size-small;
+    }
+
+    &__btn {
+      padding: 0.6rem 1.2rem;
+      font-size: $font-size-small;
+    }
+  }
+}

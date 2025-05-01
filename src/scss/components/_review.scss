@@ -1,0 +1,127 @@
+/* Стили для секции отзывов */
+.reviews {
+  padding: 4rem 0;
+  background: $gray-light;
+  text-align: center;
+
+  &__title {
+    font-size: $font-size-h2;
+    color: $secondary-color;
+    margin-bottom: 2rem;
+  }
+
+  &__slider {
+    max-width: $slider-max-width;
+    margin: 0 auto;
+    position: relative;
+
+    .slick-dots {
+      bottom: -30px;
+
+      li {
+        margin: 0 5px;
+
+        button {
+          width: $dot-size;
+          height: $dot-size;
+          background: $gray-border;
+          border-radius: 50%;
+          transition: background $transition-duration;
+          &::before {
+            content: "";
+          }
+          &:hover,
+          &:focus {
+            background: lighten($primary-color, 20%);
+          }
+        }
+
+        &.slick-active button {
+          background: $primary-color;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    padding: 0 1rem;
+    opacity: 0.6;
+    transition: opacity $transition-duration;
+
+    &.slick-active {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    background: $white;
+    padding: 2rem;
+    border-radius: $border-radius-img;
+    box-shadow: $shadow;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-size: $font-size-p;
+    color: $secondary-color;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  &__text-full {
+    display: none;
+    font-size: $font-size-p;
+    color: $secondary-color;
+    margin-top: 1rem;
+  }
+
+  &__read-more {
+    padding: 0.5rem 1rem;
+    background: $gradient-bg;
+    color: $white;
+    border: none;
+    border-radius: $border-radius-btn;
+    cursor: pointer;
+    font-size: $font-size-small;
+    transition: transform $transition-duration, box-shadow $transition-duration;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__author {
+    font-size: $font-size-small;
+    color: $gray-dark;
+    margin-top: 1rem;
+    font-style: italic;
+  }
+
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+
+    &__title {
+      font-size: $font-size-h3;
+    }
+
+    &__content {
+      padding: 1.5rem;
+      min-height: 150px;
+    }
+
+    &__text,
+    &__text-full {
+      font-size: 0.95rem;
+    }
+
+    &__read-more {
+      font-size: $font-size-xsmall;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+}

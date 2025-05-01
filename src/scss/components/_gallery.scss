@@ -1,0 +1,115 @@
+/* Стили для галереи */
+.gallery {
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  background: $gradient-bg-base;
+  box-shadow: $shadow;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: $font-size-h2;
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__filter {
+    padding: 0.5rem 1rem;
+    background: $white;
+    border: none;
+    cursor: pointer;
+    font-size: $font-size-p;
+    box-shadow: $shadow;
+    transition: background 0.3s, transform 0.3s;
+
+    &--active {
+      background: $primary-color;
+      color: $white;
+    }
+
+    &:hover {
+      background: $gradient-bg;
+      color: $white;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  &__item {
+    display: block;
+    height: 250px;
+    overflow: hidden;
+    box-shadow: $shadow;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 992px) {
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    &__item {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: $font-size-h3;
+    }
+
+    &__filters {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    &__filter {
+      padding: 0.4rem 0.8rem;
+      font-size: $font-size-small;
+    }
+
+    &__items {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    &__item {
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 2rem 1rem;
+
+    &__title {
+      font-size: $font-size-h3;
+    }
+
+    &__items {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      height: 250px;
+    }
+  }
+}

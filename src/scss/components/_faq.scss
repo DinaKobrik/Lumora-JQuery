@@ -1,0 +1,107 @@
+/* Стили для FAQ */
+.faq {
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  background: $gradient-bg;
+  box-shadow: $shadow;
+
+  &__title {
+    text-align: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: $font-size-h2;
+  }
+
+  &__item {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    transition: background 0.3s;
+    position: relative;
+    border-radius: $border-radius-img;
+
+    &:hover {
+      background: $gray-light;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: $border-radius-img 0;
+      border-top: 3px solid $gray-light;
+      border-left: 3px solid $gray-light;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: $border-radius-img 0;
+      border-bottom: 3px solid $gray-light;
+      border-right: 3px solid $gray-light;
+    }
+  }
+
+  &__question {
+    text-align: center;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: $font-size-h3;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__answer {
+    padding: 0 2rem 1rem;
+    display: none;
+    font-size: $font-size-p;
+  }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: $font-size-h3;
+    }
+    &__item {
+      &::before {
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+      &::after {
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+    }
+
+    &__question {
+      padding: 1rem;
+      font-size: $font-size-p;
+    }
+    &__answer {
+      padding: 0 1rem 1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 2rem 1rem;
+
+    &__title {
+      font-size: $font-size-h3;
+    }
+
+    &__question {
+      font-size: $font-size-small;
+    }
+
+    &__answer {
+      font-size: $font-size-small;
+    }
+  }
+}
